@@ -104,32 +104,32 @@ export default class FishTankBadge extends Vue {
 </script>
 
 <template>
-    <a 
-        href ="javascript:;" 
-        :class="interactive" 
-        v-on="listeners"
-        :removableBadge = "removable">
-        <div 
-            class="badge" 
-            :class= "[themeClass, badgePaddingClass]">
-            <box
-                display="flex"
-                type="section"
-                justify-content="between"
-                align-items="center">
-                <badge-text
-                    :color="textClass"
-                    :shade="textShade"
-                    :theme="theme"
-                    size="baseSm"
-                    semi-bold>
-                    <!-- @slot Use this slot to pass in tag text -->
-                    <slot />
-                </badge-text>
-                <close v-if="removable" :class="iconClass" />
-            </box>
-        </div>
-    </a>
+  <a 
+    href ="javascript:;" 
+    :class="interactive" 
+    v-on="listeners"
+    :removableBadge = "removable">
+    <div 
+      class="badge" 
+      :class= "[themeClass, badgePaddingClass]">
+      <box
+        display="flex"
+        type="section"
+        justify-content="between"
+        align-items="center">
+        <badge-text
+          :color="textClass"
+          :shade="textShade"
+          :theme="theme"
+          size="baseSm"
+          semi-bold>
+          <!-- @slot Use this slot to pass in tag text -->
+          <slot />
+        </badge-text>
+        <close v-if="removable" :class="iconClass" />
+      </box>
+    </div>
+  </a>
 </template>
 
 <style lang="scss" scoped>
